@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RupeeSmart — Personal Finance for Young Indians</title>
+<meta name="description" content="Salary slips, SIPs, credit scores, tax saving — explained simply for young Indians. No jargon, just clarity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Rupee<span>Smart</span></a>
+    <div class="nav-links">
+      <a href="category-salary.html">Salary & Tax</a>
+      <a href="category-invest.html">Investing</a>
+      <a href="category-credit.html">Credit</a>
+      <a href="category-budget.html">Budgeting</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="category-salary.html">Salary & Tax</a>
+    <a href="category-invest.html">Investing</a>
+    <a href="category-credit.html">Credit</a>
+    <a href="category-budget.html">Budgeting</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">India's clearest money guide</div>
+    <h1 class="hero-title">Your salary arrived.<br><em>Now what?</em></h1>
+    <p class="hero-sub">SIPs, salary slips, CIBIL scores, 80C — decoded simply for young Indians earning their first lakhs.</p>
+    <div class="hero-actions">
+      <a href="category-salary.html" class="btn-primary">Start with Salary →</a>
+      <a href="article-sip-vs-rd.html" class="btn-ghost">SIP vs RD explained</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">20+</span><span class="stat-l">Free guides</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">0</span><span class="stat-l">Jargon</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">₹0</span><span class="stat-l">To read</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>SIP BASICS&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>TAX SAVING 80C&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>CIBIL SCORE&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>SALARY SLIP&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>ZERO-BASED BUDGETING&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>TERM INSURANCE&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>CREDIT CARD TIPS&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>EPF & PPF&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>SIP BASICS&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>TAX SAVING 80C&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>CIBIL SCORE&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>SALARY SLIP&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>ZERO-BASED BUDGETING&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>TERM INSURANCE&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- FEATURED ARTICLE -->
+<section class="section featured-section">
+  <div class="container">
+    <div class="section-label">Featured guide</div>
+    <div class="featured-grid">
+      <a href="article-salary-slip.html" class="featured-card">
+        <div class="featured-tag">Salary & Tax</div>
+        <h2 class="featured-title">How to read your first salary slip — PF, TDS, HRA explained simply</h2>
+        <p class="featured-desc">Your CTC is ₹6L but you're getting ₹38,000 in hand? Here's exactly where the rest goes — and how to keep more of it.</p>
+        <div class="featured-meta">
+          <span class="read-time">8 min read</span>
+          <span class="featured-arrow">→</span>
+        </div>
+        <div class="featured-visual">
+          <div class="slip-mock">
+            <div class="slip-row"><span>Basic Salary</span><span class="green">₹25,000</span></div>
+            <div class="slip-row"><span>HRA</span><span class="green">₹10,000</span></div>
+            <div class="slip-row"><span>Special Allow.</span><span class="green">₹8,500</span></div>
+            <div class="slip-row divider"><span>PF Deduction</span><span class="red">−₹3,000</span></div>
+            <div class="slip-row"><span>TDS</span><span class="red">−₹2,500</span></div>
+            <div class="slip-row total"><span>In-hand</span><span>₹38,000</span></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST ARTICLES GRID -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Latest guides</div>
+      <h2 class="section-title">Start here</h2>
+    </div>
+    <div class="articles-grid">
+
+      <a href="article-sip-vs-rd.html" class="article-card cat-invest">
+        <div class="card-cat">Investing</div>
+        <h3>SIP vs RD — which is better for a 22-year-old?</h3>
+        <p>Recurring deposits feel safe. SIPs feel scary. Here's the actual numbers comparison.</p>
+        <div class="card-footer">
+          <span class="read-time">6 min</span><span>→</span>
+        </div>
+      </a>
+
+      <a href="article-cibil.html" class="article-card cat-credit">
+        <div class="card-cat">Credit</div>
+        <h3>Improve your CIBIL from 650 to 750 in 6 months</h3>
+        <p>A low score isn't permanent. These 5 moves work fast without any paid service.</p>
+        <div class="card-footer">
+          <span class="read-time">7 min</span><span>→</span>
+        </div>
+      </a>
+
+      <a href="article-80c.html" class="article-card cat-tax">
+        <div class="card-cat">Tax Saving</div>
+        <h3>Save ₹46,800 in tax this year — the 80C guide</h3>
+        <p>ELSS, PPF, LIC, EPF — which ones count and how to max out your deductions.</p>
+        <div class="card-footer">
+          <span class="read-time">9 min</span><span>→</span>
+        </div>
+      </a>
+
+      <a href="article-budget-30k.html" class="article-card cat-budget">
+        <div class="card-cat">Budgeting</div>
+        <h3>Zero-based budgeting on a ₹30,000 salary — a real example</h3>
+        <p>Every rupee gets a job. Here's a month-by-month breakdown that actually works in Indian cities.</p>
+        <div class="card-footer">
+          <span class="read-time">5 min</span><span>→</span>
+        </div>
+      </a>
+
+      <a href="article-credit-card.html" class="article-card cat-credit">
+        <div class="card-cat">Credit</div>
+        <h3>Best first credit card in India — no annual fee picks</h3>
+        <p>HDFC MoneyBack, SBI SimplySave, or Axis Flipkart? Here's which one to get first.</p>
+        <div class="card-footer">
+          <span class="read-time">5 min</span><span>→</span>
+        </div>
+      </a>
+
+      <a href="article-epf.html" class="article-card cat-invest">
+        <div class="card-cat">Investing</div>
+        <h3>EPF vs PPF vs NPS — which retirement account actually wins?</h3>
+        <p>All three give tax benefits. Only one is compulsory. Here's how to use all three smartly.</p>
+        <div class="card-footer">
+          <span class="read-time">8 min</span><span>→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR PROMO -->
+<section class="section calc-promo">
+  <div class="container">
+    <div class="calc-inner">
+      <div class="calc-text">
+        <div class="section-label">Free tool</div>
+        <h2>SIP Calculator</h2>
+        <p>See exactly how much your monthly SIP will grow. Adjust amount, rate, and years — get an instant projection.</p>
+        <a href="calculator.html" class="btn-primary">Try the calculator →</a>
+      </div>
+      <div class="calc-preview">
+        <div class="calc-mock">
+          <div class="calc-label">Monthly SIP: ₹5,000 × 10 years @ 12%</div>
+          <div class="calc-bars">
+            <div class="bar-group">
+              <div class="bar invested" style="height:60px"></div>
+              <div class="bar-label">Invested<br>₹6L</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar returns" style="height:105px"></div>
+              <div class="bar-label">Returns<br>₹4.5L</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar total" style="height:165px"></div>
+              <div class="bar-label">Total<br>₹11.6L</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Browse by topic</div>
+      <h2 class="section-title">What do you need help with?</h2>
+    </div>
+    <div class="categories-grid">
+      <a href="category-salary.html" class="cat-card cc-salary">
+        <div class="cat-icon">₹</div>
+        <div class="cat-name">Salary & Tax</div>
+        <div class="cat-count">6 guides</div>
+      </a>
+      <a href="category-invest.html" class="cat-card cc-invest">
+        <div class="cat-icon">📈</div>
+        <div class="cat-name">Investing</div>
+        <div class="cat-count">5 guides</div>
+      </a>
+      <a href="category-credit.html" class="cat-card cc-credit">
+        <div class="cat-icon">★</div>
+        <div class="cat-name">Credit Score</div>
+        <div class="cat-count">4 guides</div>
+      </a>
+      <a href="category-budget.html" class="cat-card cc-budget">
+        <div class="cat-icon">◎</div>
+        <div class="cat-name">Budgeting</div>
+        <div class="cat-count">4 guides</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="nl-text">
+        <h2>One money tip, every week.</h2>
+        <p>No spam. No broker ads. Just one actionable personal finance tip for young Indians — every Saturday morning.</p>
+      </div>
+      <form class="nl-form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe free</button>
+      </form>
+      <p class="nl-note" id="nlNote"></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Rupee<span>Smart</span></div>
+        <p>Personal finance education for young Indians. No jargon, no sales pitch — just clear money knowledge.</p>
+        <p class="disclaimer">Disclaimer: We are not SEBI registered advisors. Articles are educational only. Please consult a certified financial advisor before investing.</p>
+      </div>
+      <div class="footer-links">
+        <div class="fl-col">
+          <div class="fl-head">Topics</div>
+          <a href="category-salary.html">Salary & Tax</a>
+          <a href="category-invest.html">Investing</a>
+          <a href="category-credit.html">Credit Score</a>
+          <a href="category-budget.html">Budgeting</a>
+        </div>
+        <div class="fl-col">
+          <div class="fl-head">Site</div>
+          <a href="about.html">About</a>
+          <a href="calculator.html">SIP Calculator</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 RupeeSmart. Made with ♥ in India.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

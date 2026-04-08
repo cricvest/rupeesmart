@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIP Calculator — RupeeSmart</title>
+<meta name="description" content="Free SIP calculator for Indians. See exactly how your mutual fund SIP grows over time. Instant results, no signup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Rupee<span>Smart</span></a>
+    <div class="nav-links">
+      <a href="category-salary.html">Salary & Tax</a>
+      <a href="category-invest.html">Investing</a>
+      <a href="category-credit.html">Credit</a>
+      <a href="category-budget.html">Budgeting</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="category-salary.html">Salary & Tax</a>
+    <a href="category-invest.html">Investing</a>
+    <a href="category-credit.html">Credit</a>
+    <a href="category-budget.html">Budgeting</a>
+  </div>
+</nav>
+
+<section class="calc-page">
+  <div class="container">
+    <div class="section-label">Free tool</div>
+    <h1>SIP Calculator</h1>
+    <p class="lead">Drag the sliders. See your wealth grow in real-time.</p>
+
+    <!-- AdSense placeholder -->
+    <div style="background:var(--paper-2);border:1px dashed var(--paper-3);border-radius:8px;padding:20px;text-align:center;font-size:12px;color:var(--ink-muted);margin-bottom:40px;">
+      [Google AdSense Ad — 728×90 leaderboard]
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label>Monthly SIP Amount</label>
+          <input type="range" id="sip" min="500" max="100000" step="500" value="5000" oninput="calcSIP()">
+          <div class="val" id="sipVal">₹5,000</div>
+        </div>
+        <div class="input-group">
+          <label>Expected Annual Return</label>
+          <input type="range" id="rate" min="6" max="18" step="0.5" value="12" oninput="calcSIP()">
+          <div class="val" id="rateVal">12%</div>
+        </div>
+        <div class="input-group">
+          <label>Investment Period</label>
+          <input type="range" id="years" min="1" max="30" step="1" value="10" oninput="calcSIP()">
+          <div class="val" id="yearsVal">10 yrs</div>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="result-card rc-invested">
+          <div class="result-label">Total Invested</div>
+          <div class="result-val" id="invested">₹6.00L</div>
+        </div>
+        <div class="result-card rc-returns">
+          <div class="result-label">Estimated Returns</div>
+          <div class="result-val" id="returns">₹5.57L</div>
+        </div>
+        <div class="result-card rc-total">
+          <div class="result-label">Total Value</div>
+          <div class="result-val" id="total">₹11.57L</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;padding:20px 0;border-top:1px solid var(--paper-3);">
+      <p style="font-size:13px;color:var(--ink-muted);line-height:1.7;">
+        <strong>Disclaimer:</strong> This calculator provides estimates only. Actual returns may vary based on market conditions. Mutual fund investments are subject to market risks. Past performance does not guarantee future returns. This is not investment advice.
+      </p>
+    </div>
+
+    <!-- Related Articles -->
+    <div style="margin-top:56px;">
+      <div class="section-label">Read next</div>
+      <h2 class="section-title" style="margin-bottom:24px;">Learn about SIPs</h2>
+      <div class="articles-grid" style="grid-template-columns:1fr 1fr;">
+        <a href="article-sip-vs-rd.html" class="article-card cat-invest">
+          <div class="card-cat">Investing</div>
+          <h3>SIP vs RD — which is better for a 22-year-old?</h3>
+          <p>The actual numbers comparison you need before choosing.</p>
+          <div class="card-footer"><span class="read-time">6 min</span><span>→</span></div>
+        </a>
+        <a href="article-epf.html" class="article-card cat-invest">
+          <div class="card-cat">Investing</div>
+          <h3>EPF vs PPF vs NPS — which retirement account wins?</h3>
+          <p>All three give tax benefits. Here's how to use all three smartly.</p>
+          <div class="card-footer"><span class="read-time">8 min</span><span>→</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Rupee<span>Smart</span></a>
+        <p>Personal finance education for young Indians. No jargon, no sales pitch.</p>
+        <p class="disclaimer">Not SEBI registered. Articles are educational only. Consult a certified advisor before investing.</p>
+      </div>
+      <div class="footer-links">
+        <div class="fl-col">
+          <div class="fl-head">Topics</div>
+          <a href="category-salary.html">Salary & Tax</a>
+          <a href="category-invest.html">Investing</a>
+          <a href="category-credit.html">Credit Score</a>
+          <a href="category-budget.html">Budgeting</a>
+        </div>
+        <div class="fl-col">
+          <div class="fl-head">Site</div>
+          <a href="about.html">About</a>
+          <a href="calculator.html">SIP Calculator</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 RupeeSmart. Made with ♥ in India.</p></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function fmt(n) {
+  if (n >= 10000000) return '₹' + (n/10000000).toFixed(2) + 'Cr';
+  if (n >= 100000) return '₹' + (n/100000).toFixed(2) + 'L';
+  return '₹' + Math.round(n).toLocaleString('en-IN');
+}
+function calcSIP() {
+  const sip = +document.getElementById('sip').value;
+  const rate = +document.getElementById('rate').value;
+  const years = +document.getElementById('years').value;
+  const n = years * 12;
+  const r = (rate / 100) / 12;
+  const total = sip * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+  const invested = sip * n;
+  const gains = total - invested;
+  document.getElementById('sipVal').textContent = '₹' + sip.toLocaleString('en-IN');
+  document.getElementById('rateVal').textContent = rate + '%';
+  document.getElementById('yearsVal').textContent = years + ' yrs';
+  document.getElementById('invested').textContent = fmt(invested);
+  document.getElementById('returns').textContent = fmt(gains);
+  document.getElementById('total').textContent = fmt(total);
+}
+calcSIP();
+</script>
+</body>
+</html>
